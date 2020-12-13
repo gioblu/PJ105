@@ -1,8 +1,8 @@
-// P105 PIR sensor module
+// PJ105 photo-resistor sensor module
 
-// P105 software version
+// PJ105 software version
 #define MODULE_VERSION          1
-// P105 by default accepts configuratio change
+// PJ105 by default accepts configuratio change
 #define MODULE_ACCEPT_CONFIG true
 
 // PJON configuration
@@ -39,7 +39,7 @@ void setup() {
   bus.begin();
   // Register the receiver callback called when a packet is received
   bus.set_receiver(receiver_function);
-  // Setup pin which is connected to the PIR sensor
+  // Setup pin which is connected to the photo-resistor sensor
   pinMode(A1, INPUT);
   // 1 second LED blink to showcase nominal startup
   digitalWrite(0, HIGH);
@@ -89,7 +89,7 @@ void receiver_function(uint8_t *payload, uint16_t length, const PJON_Packet_Info
   bool is_master =
     (info.tx.id == PJON_MASTER_ID) || (info.tx.id == recipient_id);
 
-  // Send PIR sensor value
+  // Send photo-resistor sensor value
   if(is_master && (payload[0] == 'E')) {
     value = analogRead(A1);
     packet[0] = (uint16_t)value >> 8;
