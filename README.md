@@ -2,7 +2,7 @@
 ## PJ105
 <img src="images/PJ105-front.jpg" style="display: inline-block;" width="400"><img src="images/PJ105-back.jpg" style="display: inline-block;" width="400">
 
-The PJ105 module is a 29.9x25.6mm open-source, stand-alone, programmable phto-resistor light sensor based on ATtiny85 with [PJON](https://github.com/gioblu/PJON/) over [PJDL](https://github.com/gioblu/PJON/blob/master/src/strategies/SoftwareBitBang/specification) networking. It needs only 3 pins (PJDL, 5v, GND) to operate transmitting samples and receiving incoming configuration on the same PJON IO pin.
+The PJ105 module is a 29.9x25.6mm open-source, stand-alone, programmable phto-resistor light sensor based on ATtiny85 with [PJON](https://github.com/gioblu/PJON/) over [PJDL](https://github.com/gioblu/PJON/blob/master/src/strategies/SoftwareBitBang/specification) networking. It needs only 3 pins (PJDL, 5v, GND) to operate transmitting samples and receiving incoming configuration on the same PJON IO pin. PJ103 consumes around 0.159w with the relay off and 0.837w with the relay on when powered with 9v.
 
 ```cpp  
  _______   _______   _______
